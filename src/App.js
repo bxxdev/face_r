@@ -123,7 +123,7 @@ onInputChange =(event)=>{
 onButtonSubmit=()=>{
     
     this.setState({imageUrl:this.state.input});
-    fetch('http://localhost:3000/imageurl',{
+    fetch('https://shielded-beach-83660.herokuapp.com/imageurl',{
           method:'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -149,7 +149,7 @@ onButtonSubmit=()=>{
 // app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
   .then(response => {
     if (response){
-        fetch('http://localhost:3000/image',{
+        fetch('https://shielded-beach-83660.herokuapp.com/image',{
           method:'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
